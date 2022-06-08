@@ -1,0 +1,160 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: #e4e4e4;
+}
+.header__container{
+    height: 60px;
+    background-color: #12b0d8;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.logo__name{
+    font-size: 16px;
+    color:white;
+    margin:0px;
+    
+}
+.search__form{
+    padding-left: 5px;
+}
+.search__city{
+    color: white;
+    font-size: 16px;
+}
+.search{
+    margin: auto;
+    width: 500px;
+    display: flex;
+    align-items: center;
+}
+.search__button{
+    background-color: #0576aa;
+    color: white;
+    border-radius: 5px;
+    border: transparent;
+    padding-left: 5px;
+    margin-left: 5px;
+}
+.search__input{
+    height: 20px;
+}
+.header__line{
+    border-left: 1px solid white;
+    height: 35px;
+    
+}
+.header__date{
+    height: 35px;
+    display: flex;
+}
+.date__in{
+    color: white;
+    width: 240px;
+    font-size: 13px;
+    padding-left: 10px;
+    margin: 0px;
+    display: flex;
+}
+.main__container-weather{
+    width: 1400px;
+    margin: auto;
+}
+.main__weather{
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    height: 55px;
+    font-size: 25px;
+}
+.tabs {
+    font-size: 0;
+    max-width: 1400px;
+    margin: auto;
+  }
+
+  .tabs>input[type="radio"] {
+    display: none;
+  }
+
+  .tabs>div {
+    /* скрыть контент по умолчанию */
+    display: none;
+    border: 1px solid #e0e0e0;
+    font-size: 16px;
+    background-color: white;
+    border-radius: 0px;
+    width: 1400px;
+  }
+
+  /* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
+  #tab-btn-1:checked~#content-1,
+  #tab-btn-2:checked~#content-2,
+  #tab-btn-3:checked~#content-3 {
+    display: block;
+  }
+
+  .tabs>label {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    padding: 2px 323px;
+    font-size: 16px;
+    line-height: 1.5;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+
+  .tabs>label:not(:first-of-type) {
+    border-left: none;
+  }
+
+  .tabs>input[type="radio"]:checked+label {
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+  }
+  .content-1__container-general{
+      display: flex;
+      height: 300px;
+      justify-content: space-around;
+  }
+  .content-1__container-2{
+      display: flex;
+      flex-flow: column;
+      width: 560px;
+      align-items: center; 
+  }
+  .content-1__container{
+      display: flex;
+      width: 560px;
+      justify-content: inherit;
+  }
+  .humidity,
+  .pressure,
+  .wind{
+      margin: 18px;
+      width: 100px;
+ }
+ .content-2__fivedays{
+    border: 1px solid gray;
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+ }
+
+ td{
+     font-size: 13px;
+     width: 100%;
+     text-align: center;
+ }

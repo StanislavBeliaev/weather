@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/date.js"></script>
+    <title>PredWeather</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="logo">
+                <p class="logo__name">PredWeather</p>
+            </div>
+            <div class="search">
+                <p class="search__city">Search your city:</p>
+                <form class="search__form" name="" method="" action="">
+                <input class="search__input" type="text" size="30">
+                <button class="search__button">Search</button>
+                </form>
+            </div>
+            <div class="header__line"></div>
+            <div class="header__date">
+                <div class="date__container">
+                <p id="date1" class="date__in">Time in</p>
+                <p id="date2" class="date__in">Time</p>
+                </div>
+                <!-- add time-->
+            </div>
+        </div>
+    </header>
+    <main class="main__content">
+        <div class="main__container-weather">
+        <p class="main__weather">Weather in</p>
+        </div>
+      <div class="tabs">
+            <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
+            <label for="tab-btn-1">Today</label>
+            <input type="radio" name="tab-btn" id="tab-btn-2" value="">
+            <label for="tab-btn-2">Five days</label>
+
+            <div id="content-1">
+                <!-- container-1-->
+                <div class="content-1__container-general">
+                    <div class="content-1__container">
+                <div class="content-1__clouds"><p class="clouds">Clouds (overcast clouds)</p></div>
+                <div class="content-1__Temperature">
+                    <p class="temperature">Temperature: </p>
+                    <p class="temperature__feels">Feels like: </p>
+                </div>
+            </div>
+                <!-- container-1 end-->
+                
+                    <div class="content-1__container-2">
+                        <p class="humidity">Humidity:</p>
+                        <p class="pressure">Pressure:</p>
+                        <p class="wind">Wind:</p>
+                     </div>
+                </div>
+            </div>
+            <div id="content-2">
+               <table class="content-2__fivedays" border="1">
+                
+                    <tr class="fivedays__head">
+                         <td>Date</td>
+                         <td>Temperature</td>
+                         <td>Feels like, F</td>
+                         <td colspan="2">Cloudiness weather and precipitation</td>
+                         <td>Wind speed and direction, m/s</td>
+                         <td>Pressure, gPa</td>
+                         <td>Humidity, %</td>
+                    </tr>
+                    <tr>
+                        <td>123</td>
+                        <td>123</td>
+                        <td>123</td>
+                        <td>123</td>
+                        <td>123</td>
+                        <td>123</td>
+                        <td>123</td>
+                        <td>123</td>
+                    </tr>
+                    <tr>
+                        <td>123</td>
+                        <td>123</td>
+                        <td>123</td>
+                        <td>123</td>
+                        <td>123</td>
+                        <td>123</td>
+                        <td>123</td>
+                        <td>123</td>
+                    </tr>
+                    <tr>
+                        <td>123</td>
+                        <td>123</td>
+                        <td>123</td>
+                        <td>123</td>
+                        <td>123</td>
+                        <td>123</td>
+                        <td>123</td>
+                        <td>123</td>
+                    </tr>
+                    <tr>
+                        <td>123</td>
+                        <td>123</td>
+                        <td>123</td>
+                        <td>123</td>
+                        <td>123</td>
+                        <td>123</td>
+                        <td>123</td>
+                        <td>123</td>
+                    </tr>                                 
+               </table>  
+            </div>
+          </div>
+    </main>
+</body>
+</html>
