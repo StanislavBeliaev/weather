@@ -144,7 +144,7 @@ body{
   .pressure,
   .wind{
       margin: 18px;
-      width: 100px;
+      width: 200px;
  }
  .content-2__fivedays{
     border: 1px solid gray;
@@ -157,4 +157,10 @@ body{
      font-size: 13px;
      width: 100%;
      text-align: center;
+ }
+ .wether__icon{
+     display: flex;
+     align-items: center;
+     width: 70px;
+     height: 70px;
  }

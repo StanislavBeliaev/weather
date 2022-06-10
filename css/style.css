@@ -195,7 +195,7 @@ body {
 .pressure,
 .wind {
   margin: 18px;
-  width: 100px;
+  width: 200px;
 }
 
 .content-2__fivedays {
@@ -209,5 +209,16 @@ td {
   font-size: 13px;
   width: 100%;
   text-align: center;
+}
+
+.wether__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70px;
+  height: 70px;
 }
 /*# sourceMappingURL=style.css.map */
