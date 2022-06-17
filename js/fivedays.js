@@ -2,6 +2,7 @@ export let search = document.querySelector(".search__input");
 export let table = document.querySelector(".content-2__fivedays")
 import {form} from './today'
 export function tableCreate(){
+    table.innerHTML = ""
     for(let i = 0; i<39;i++){
         let tr = document.createElement('tr')
         table.append(tr)
@@ -64,14 +65,14 @@ fetch(
         tableCreate()
         toTextualDescription(data.list[3].wind.deg) 
         for(let i = 0; i<39; i++){
-            document.querySelectorAll('tr td:first-child')[i].innerHTML += data.list[i].dt_txt
-            document.querySelectorAll('tr td:nth-child(2)')[i].innerHTML += Number(data.list[i].main.temp).toFixed(0)
-            document.querySelectorAll('tr td:nth-child(3)')[i].innerHTML += Number(data.list[i].main.feels_like).toFixed(0)
+            document.querySelectorAll('tr td:first-child')[i].innerHTML = data.list[i].dt_txt
+            document.querySelectorAll('tr td:nth-child(2)')[i].innerHTML = Number(data.list[i].main.temp).toFixed(0)
+            document.querySelectorAll('tr td:nth-child(3)')[i].innerHTML = Number(data.list[i].main.feels_like).toFixed(0)
             document.querySelectorAll('tr img:nth-child(1)')[i].setAttribute('src', "https://openweathermap.org/img/wn/"+data.list[i].weather[0].icon+".png" )
-            document.querySelectorAll('tr td:nth-child(5)')[i].innerHTML += data.list[i].weather[0].main + "," +data.list[i].weather[0].description
-            document.querySelectorAll('tr td:nth-child(6)')[i].innerHTML += Number(data.list[i].wind.speed) +"," +toTextualDescription(data.list[i].wind.deg)
-            document.querySelectorAll('tr td:nth-child(7)')[i].innerHTML += Number(data.list[i].main.pressure)
-            document.querySelectorAll('tr td:nth-child(8)')[i].innerHTML += Number(data.list[i].main.humidity)
+            document.querySelectorAll('tr td:nth-child(5)')[i].innerHTML = data.list[i].weather[0].main + "," +data.list[i].weather[0].description
+            document.querySelectorAll('tr td:nth-child(6)')[i].innerHTML = Number(data.list[i].wind.speed) +"," +toTextualDescription(data.list[i].wind.deg)
+            document.querySelectorAll('tr td:nth-child(7)')[i].innerHTML = Number(data.list[i].main.pressure)
+            document.querySelectorAll('tr td:nth-child(8)')[i].innerHTML = Number(data.list[i].main.humidity)
         }
     })
 

@@ -30,13 +30,13 @@ form.addEventListener("submit", function (e) {
   )
     .then((response) => response.json())
     .then((data) => {
-      wind.innerHTML += data.wind.speed + " m/s" +"," +toTextualDescription(data.wind.deg);
-      temperature.innerHTML += data.main.temp + " °F";
-      humidity.innerHTML += data.main.humidity + " %";
-      feelsLike.innerHTML += data.main.feels_like + " °F";
-      pressure.innerHTML += data.main.pressure + " gPa";
+      wind.innerHTML = data.wind.speed + " m/s" +"," +toTextualDescription(data.wind.deg);
+      temperature.innerHTML = data.main.temp + " °F";
+      humidity.innerHTML = data.main.humidity + " %";
+      feelsLike.innerHTML = data.main.feels_like + " °F";
+      pressure.innerHTML = data.main.pressure + " gPa";
       weatherIcon.setAttribute('src',"https://openweathermap.org/img/w/" + data.weather[0].icon + ".png" ) ;
-      desc.innerHTML += data.weather[0].description;
+      desc.innerHTML = data.weather[0].description;
       weatherIn.innerHTML = ("Weather In")+ " "+searchInput.value
     })
     .catch((err) => alert("Wrong city name!"));
