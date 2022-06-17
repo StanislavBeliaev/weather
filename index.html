@@ -23,7 +23,7 @@
               size="30"
               placeholder="Enter a city"
             />
-            <input class="search__button" type="submit" value="Search" />
+            <input class="search__button" type="submit" value="Search"  />
           </form>
         </div>
         <div class="header__line"></div>
@@ -52,7 +52,7 @@
             <div class="content-1__container">
               <div class="content-1__clouds">
                 <p class="clouds">Clouds (<span class="clouds1"></span>)</p>
-                <img class="wether__icon" src="" alt="Weather icon">
+                <img class="wether__icon" src="" alt="Weather icon" />
               </div>
               <div class="content-1__Temperature">
                 <p class="temperature">Temperature:</p>
@@ -71,59 +71,23 @@
         <div id="content-2">
           <table class="content-2__fivedays" border="1">
             <tr class="fivedays__head">
-              <td>Date</td>
-              <td>Temperature</td>
-              <td>Feels like, F</td>
-              <td colspan="2">Cloudiness weather and precipitation</td>
-              <td>Wind speed and direction, m/s</td>
-              <td>Pressure, gPa</td>
-              <td>Humidity, %</td>
-            </tr>
-            <tr>
-              <td>123</td>
-              <td>123</td>
-              <td>123</td>
-              <td>123</td>
-              <td>123</td>
-              <td>123</td>
-              <td>123</td>
-              <td>123</td>
-            </tr>
-            <tr>
-              <td>123</td>
-              <td>123</td>
-              <td>123</td>
-              <td>123</td>
-              <td>123</td>
-              <td>123</td>
-              <td>123</td>
-              <td>123</td>
-            </tr>
-            <tr>
-              <td>123</td>
-              <td>123</td>
-              <td>123</td>
-              <td>123</td>
-              <td>123</td>
-              <td>123</td>
-              <td>123</td>
-              <td>123</td>
-            </tr>
-            <tr>
-              <td>123</td>
-              <td>123</td>
-              <td>123</td>
-              <td>123</td>
-              <td>123</td>
-              <td>123</td>
-              <td>123</td>
-              <td>123</td>
+              <th class="day">Date</th>
+              <th class="temp">Temperature</th>
+              <th class="feel">Feels like, F</th>
+              <th class="cloudandpre" colspan="2">
+                Cloudiness weather and precipitation
+              </th>
+              <th class="fivedays__wind">Wind speed and direction, m/s</th>
+              <th class="fivedays__pressure">Pressure, gPa</th>
+              <th class="fivedays__humidity">Humidity, %</th>
             </tr>
           </table>
         </div>
       </div>
     </main>
-    <script src="js/date.js"></script>
-    <script src="js/today.js"></script>
+    <!-- <script src="js/date.js"></script> -->
+    <!-- <script src="js/today.js"></script>  -->
+    <!-- <script src="js/fivedays.js"></script> -->
+    <script src="dist/bundle.js"></script>
   </body>
 </html>
