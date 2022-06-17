@@ -35,7 +35,7 @@ form.addEventListener("submit", function (e) {
       humidity.innerHTML += data.main.humidity + " %";
       feelsLike.innerHTML += data.main.feels_like + " °F";
       pressure.innerHTML += data.main.pressure + " gPa";
-      weatherIcon.setAttribute('src',"http://openweathermap.org/img/w/" + data.weather[0].icon + ".png" ) ;
+      weatherIcon.setAttribute('src',"https://openweathermap.org/img/w/" + data.weather[0].icon + ".png" ) ;
       desc.innerHTML += data.weather[0].description;
       weatherIn.innerHTML = ("Weather In")+ " "+searchInput.value
     })

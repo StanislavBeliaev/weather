@@ -57,7 +57,7 @@ export function  toTextualDescription(deg){
 form.addEventListener("submit", function (e) {
     e.preventDefault();
 fetch(
-    "http://api.openweathermap.org/data/2.5/forecast?q="+search.value+"&appid=14112ae00131ef273ecde36d5985622d"
+    "https://api.openweathermap.org/data/2.5/forecast?q="+search.value+"&appid=14112ae00131ef273ecde36d5985622d"
     )
     .then((response) => response.json())
     .then((data) => {
@@ -67,7 +67,7 @@ fetch(
             document.querySelectorAll('tr td:first-child')[i].innerHTML += data.list[i].dt_txt
             document.querySelectorAll('tr td:nth-child(2)')[i].innerHTML += Number(data.list[i].main.temp).toFixed(0)
             document.querySelectorAll('tr td:nth-child(3)')[i].innerHTML += Number(data.list[i].main.feels_like).toFixed(0)
-            document.querySelectorAll('tr img:nth-child(1)')[i].setAttribute('src', "http://openweathermap.org/img/wn/"+data.list[i].weather[0].icon+".png" )
+            document.querySelectorAll('tr img:nth-child(1)')[i].setAttribute('src', "https://openweathermap.org/img/wn/"+data.list[i].weather[0].icon+".png" )
             document.querySelectorAll('tr td:nth-child(5)')[i].innerHTML += data.list[i].weather[0].main + "," +data.list[i].weather[0].description
             document.querySelectorAll('tr td:nth-child(6)')[i].innerHTML += Number(data.list[i].wind.speed) +"," +toTextualDescription(data.list[i].wind.deg)
             document.querySelectorAll('tr td:nth-child(7)')[i].innerHTML += Number(data.list[i].main.pressure)
