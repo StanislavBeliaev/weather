@@ -74,7 +74,7 @@ form.addEventListener("submit", function (e) {
                 document.querySelectorAll('tr td:nth-child(8)')[i].innerHTML = Number(data.list[i].main.humidity)
             }
         })
-        .catch((err) => alert("Wrong city name!"));
+        // .catch((err) => alert("Wrong city name!"));
     })
 
 // ['temps','feels','cloudandpres','fivedays__winds','fivedays__pressures','fivedays__humiditys'].forEach(c => {let td = document.createElement('td');td.classList.add(c); tr.append(td); })
