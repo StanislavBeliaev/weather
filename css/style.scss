@@ -144,7 +144,7 @@ body{
   .pressure,
   .wind{
       margin: 18px;
-      width: 200px;
+      width: 230px;
  }
  .content-2__fivedays{
     border: 1px solid gray;
@@ -162,10 +162,21 @@ body{
  .wether__icon{
      display: flex;
      align-items: center;
-     width: 70px;
-     height: 70px;
+     width: 100px;
+     height: 100px;
  }
  .weather__icons{
      width: 70px;
      height: 70px;
  }
+ .temperature{
+    width: 200px;
+ }
+ .temperature__container{
+    margin: 0px;
+ }
+ .content-1__Temperature{
+    display: flex;
+    flex-flow: column;
+ }
+ 

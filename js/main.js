@@ -7,5 +7,5 @@ setInterval(function () {
 }, 1000);
 import { button,form, searchInput,temperature,feelsLike,humidity,pressure,wind,weatherIcon,desc,weatherIn, } from './today';
 
-import { search,table,tableCreate,toTextualDescription,forms} from './fivedays';
+import { search,table,tableCreate,toTextualDescription,forms,createTableBody,tb} from './fivedays';
 

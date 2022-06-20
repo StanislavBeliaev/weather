@@ -1,11 +1,11 @@
 export let button = document.querySelector(".search__button");
 export let form = document.querySelector(".search__form");
 export let searchInput = document.querySelector(".search__input");
-export let temperature = document.querySelector(".temperature");
-export let feelsLike = document.querySelector(".temperature__feels");
-export let humidity = document.querySelector(".humidity");
-export let pressure = document.querySelector(".pressure");
-export let wind = document.querySelector(".wind");
+export let temperature = document.querySelector(".temperature__container");
+export let feelsLike = document.querySelector(".temperature__feels-container");
+export let humidity = document.querySelector(".humidity__container");
+export let pressure = document.querySelector(".pressure__container");
+export let wind = document.querySelector(".wind__container");
 export let weatherIcon = document.querySelector(".wether__icon")
 export let desc = document.querySelector(".clouds1")
 export let weatherIn = document.querySelector(".main__weather")
@@ -30,10 +30,10 @@ form.addEventListener("submit", function (e) {
   )
     .then((response) => response.json())
     .then((data) => {
-      wind.innerHTML = data.wind.speed + " m/s" +"," +toTextualDescription(data.wind.deg);
-      temperature.innerHTML = data.main.temp + " °F";
+      wind.innerHTML = data.wind.speed + " m/s" +", " +toTextualDescription(data.wind.deg);
+      temperature.innerHTML = Number(data.main.temp -273,15).toFixed(0) + " °C" ;
       humidity.innerHTML = data.main.humidity + " %";
-      feelsLike.innerHTML = data.main.feels_like + " °F";
+      feelsLike.innerHTML = Number(data.main.feels_like -273,15).toFixed(0) + " °C";
       pressure.innerHTML = data.main.pressure + " gPa";
       weatherIcon.setAttribute('src',"https://openweathermap.org/img/w/" + data.weather[0].icon + ".png" ) ;
       desc.innerHTML = data.weather[0].description;

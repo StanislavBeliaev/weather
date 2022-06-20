@@ -55,32 +55,34 @@
                 <img class="wether__icon" src="" alt="Weather icon" />
               </div>
               <div class="content-1__Temperature">
-                <p class="temperature">Temperature:</p>
-                <p class="temperature__feels">Feels like:</p>
+                <p class="temperature">Temperature: <span class="temperature__container"></span> </p>
+
+                <p class="temperature__feels">Feels like: <span class="temperature__feels-container"></span> </p>
               </div>
             </div>
             <!-- container-1 end-->
 
             <div class="content-1__container-2">
-              <p class="humidity">Humidity:</p>
-              <p class="pressure">Pressure:</p>
-              <p class="wind">Wind:</p>
+              <p class="humidity">Humidity: <span class="humidity__container"></span></p>
+              <p class="pressure">Pressure: <span class="pressure__container"></span></p>
+              <p class="wind">Wind: <span class="wind__container"></span></p>
             </div>
           </div>
         </div>
         <div id="content-2">
           <table class="content-2__fivedays" border="1">
-            <tr class="fivedays__head">
-              <th class="day">Date</th>
-              <th class="temp">Temperature</th>
-              <th class="feel">Feels like, F</th>
+            <th class="day">Date</th>
+              <th class="temp">Temperature °C</th>
+              <th class="feel">Feels like, °C</th>
               <th class="cloudandpre" colspan="2">
                 Cloudiness weather and precipitation
               </th>
               <th class="fivedays__wind">Wind speed and direction, m/s</th>
               <th class="fivedays__pressure">Pressure, gPa</th>
               <th class="fivedays__humidity">Humidity, %</th>
-            </tr>
+              <tbody class="addData">
+                
+              </tbody>
           </table>
         </div>
       </div>
