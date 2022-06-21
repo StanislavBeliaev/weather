@@ -5,7 +5,7 @@ setInterval(function () {
 setInterval(function () {
     document.getElementById('date1').innerHTML = date_time1();
 }, 1000);
-import { button,form, searchInput,temperature,feelsLike,humidity,pressure,wind,weatherIcon,desc,weatherIn, } from './today';
-
-import { search,table,tableCreate,toTextualDescription,forms,createTableBody,tb} from './fivedays';
-
+import { button,form, searchInput,temperature,feelsLike,humidity,pressure,wind,weatherIcon,desc,weatherIn,getDataDefault,addData } from './today';
+addData("Минск")
+import { search,table,tableCreate,toTextualDescription,forms,createTableBody,tb,addDataForFiveDays} from './fivedays';
+addDataForFiveDays("Минск")

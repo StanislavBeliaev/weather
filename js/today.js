@@ -21,11 +21,10 @@ function  toTextualDescription(deg){
   if(deg>22.5){return 'North Easterly';}
   return 'Northerly';
 }
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
+export function addData(city){
   fetch(
     "https://api.openweathermap.org/data/2.5/weather?q=" +
-      searchInput.value +
+      city +
       "&appid=2dace3ddd75462430dbb7b25127cf252"
   )
     .then((response) => response.json())
@@ -37,8 +36,12 @@ form.addEventListener("submit", function (e) {
       pressure.innerHTML = data.main.pressure + " gPa";
       weatherIcon.setAttribute('src',"https://openweathermap.org/img/w/" + data.weather[0].icon + ".png" ) ;
       desc.innerHTML = data.weather[0].description;
-      weatherIn.innerHTML = ("Weather In")+ " "+searchInput.value
+      weatherIn.innerHTML = ("Weather in")+ " "+city
     })
     .catch((err) => alert("Wrong city name!"));
+}
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  addData(searchInput.value)
 });
 

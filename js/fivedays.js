@@ -54,11 +54,9 @@ export function  toTextualDescription(deg){
     if(deg>22.5){return 'North Easterly';}
     return 'Northerly';
 }
-
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
+export function addDataForFiveDays(city){
     fetch(
-        "https://api.openweathermap.org/data/2.5/forecast?q="+search.value+"&appid=14112ae00131ef273ecde36d5985622d"
+        "https://api.openweathermap.org/data/2.5/forecast?q="+city+"&appid=14112ae00131ef273ecde36d5985622d"
         )
         .then((response) => response.json())
         .then((data) => {
@@ -74,7 +72,11 @@ form.addEventListener("submit", function (e) {
                 document.querySelectorAll('tr td:nth-child(8)')[i].innerHTML = Number(data.list[i].main.humidity)
             }
         })
-        // .catch((err) => alert("Wrong city name!"));
+}
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    addDataForFiveDays(search.value)
+        
     })
 
 // ['temps','feels','cloudandpres','fivedays__winds','fivedays__pressures','fivedays__humiditys'].forEach(c => {let td = document.createElement('td');td.classList.add(c); tr.append(td); })
